@@ -1,0 +1,93 @@
+.navbar {
+  background-color: #222;
+  color: white;
+  padding: 1.25rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  &__brand {
+    font-size: 1.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    &-label {
+      margin-top: -.25rem;
+      text-transform: uppercase;
+      font-size: .75em;
+    }
+  }
+  &__links {
+    display: flex;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: .25rem;
+    padding-left: 2rem;
+    right: 4rem;
+    bottom: 0;
+    transform: translateY(-100%);
+    transition: transform 300ms ease-in-out, visibility 300ms ease-in-out;
+    visibility: hidden;
+    &--open {
+      transform: none;
+      visibility: visible;
+    }
+  }
+  &__link-item {
+    &:not(:first-child) {
+      margin-left: 1.25rem;
+    }
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    transition: opacity .3s ease-in-out;
+    &:after {
+      content: '';
+      height: 1px;
+      background-color: white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: transform .2s ease-in;
+      transform-origin: center;
+      transform: scaleX(0);
+    }
+    &:hover, &:focus {
+      opacity: .75;
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  @include respond-to(mobile) {
+    &__container {
+      align-items: baseline;
+    }
+    &__links {
+      transform: none;
+      visibility: visible;
+      position: static;
+    }
+    &__toggle {
+      display: none;
+    }
+  }
+}

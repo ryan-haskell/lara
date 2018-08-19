@@ -1,0 +1,24 @@
+.hero {
+  padding: 6em 0;
+  background-color: #222;
+  color: white;
+  &__container {
+    text-align: center;
+  }
+  &__title {
+    font-size: 5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+  &__description {
+    margin-top: .5rem;
+    font-size: 1.75em;
+  }
+  @include respond-to(tablet) {
+    padding: 8em 0;
+    &__title {
+      font-size: 6em;
+    }
+  }
+}

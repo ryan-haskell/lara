@@ -1,0 +1,18 @@
+.section {
+  padding: 4em 0;
+  &__container {
+    text-align: center;
+  }
+  &__title {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  &__description {
+    font-size: 1.5em;
+    line-height: 1.3;
+    margin-top: 1rem;
+  }
+  &__content {
+    margin-top: 2rem;
+  }
+}
