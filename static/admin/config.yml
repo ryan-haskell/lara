@@ -10,6 +10,7 @@ public_folder: "/media"
 collections:
   - label: 'Pages'
     name: 'pages'
+    preview: false
     files:
       - label: 'Global Settings'
         name: 'settings'
