@@ -22,6 +22,7 @@
   &__toggle {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 2rem;
     &-label {
       margin-top: -.25rem;
