@@ -9,29 +9,13 @@
 <script>
 import Navbar from '~/components/Navbar'
 import Footer from '~/components/Footer'
+import Settings from '~/static/_pages/settings.json'
 
 export default {
   components: {
     Navbar,
     Footer
   },
-  data: () => ({
-    navbar: {
-      brand: 'Lara',
-      labels: {
-        menu: 'Menu',
-        search: 'Search',
-        close: 'Close'
-      },
-      links: [
-        { label: 'about', url: '/about' },
-        { label: 'work', url: '/work' },
-        { label: 'contact', url: '/contact' }
-      ]
-    },
-    footer: {
-      copyright: 'Copyright - Lara Studios 2018'
-    }
-  })
+  data: () => Settings
 }
 </script>

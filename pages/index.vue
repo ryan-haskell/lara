@@ -23,6 +23,7 @@
 
 <script>
 import Hero from '~/components/Hero'
+import Homepage from '~/static/_pages/homepage.json'
 
 export default {
   components: {
@@ -31,20 +32,6 @@ export default {
   mounted () {
     window.feather.replace()
   },
-  data: () => ({
-    hero: {
-      title: 'Lara',
-      description: '<p>anything can happen.</p>'
-    },
-    intro: {
-      title: 'Be proud of your website.',
-      description: `<p>Don't let an outdated site give the wrong first impression.</p>`,
-      tiles: [
-        { icon: 'zap', title: 'Fast.', description: '<p>Lightning-fast websites that can deliver.</p>' },
-        { icon: 'heart', title: 'Beautiful.', description: '<p>Rich animations for creating a beautiful experience.</p>' },
-        { icon: 'search', title: 'Simple.', description: '<p>SEO best practices from experts in the field.</p>' },
-      ]
-    }
-  })
+  data: () => Homepage
 }
 </script>
