@@ -3,6 +3,7 @@ backend:
   branch: master
 
 # publish_mode: editorial_workflow
+display_url: https://lara-studios.netlify.com
 
 media_folder: "static/media"
 public_folder: "/media"
