@@ -1,1 +1,27 @@
-{}
+{
+    "hero": {
+        "title": "Lara",
+        "description": "<p>anything can happen.</p>"
+    },
+    "intro": {
+        "title": "Be proud of your website.",
+        "description":"<p>Don't let an outdated site give the wrong first impression.</p>",
+        "tiles": [
+            {
+                "icon": "zap",
+                "title": "Fast.",
+                "description": "<p>Lightning-fast websites that can deliver.</p>"
+            },
+            {
+                "icon": "heart",
+                "title": "Beautiful.",
+                "description": "<p>Rich animations for creating a beautiful experience.</p>"
+            },
+            {
+                "icon": "search",
+                "title": "Simple.",
+                "description": "<p>SEO best practicesfrom experts in the field.</p>"
+            }
+        ]
+    }
+}
