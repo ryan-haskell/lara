@@ -1,26 +1,26 @@
 {
-    "navbar": {
-        "brand": "Lara",
-        "labels": {
-            "menu": "Menu",
-            "close": "Close"
-        },
-        "links": [
-            {
-                "label": "about",
-                "url": "/about"
-            },
-            {
-                "label": "work",
-                "url": "/work"
-            },
-            {
-                "label": "contact",
-                "url": "/contact"
-            }
-        ]
+  "navbar": {
+    "brand": "doge",
+    "labels": {
+      "menu": "Menu",
+      "close": "Close"
     },
-    "footer": {
-        "copyright": "Copyright - Lara Studios 2018"
-    }
+    "links": [
+      {
+        "label": "about",
+        "url": "/about"
+      },
+      {
+        "label": "work",
+        "url": "/work"
+      },
+      {
+        "label": "contact",
+        "url": "/contact"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Copyright - Lara Studios 2018"
+  }
 }
