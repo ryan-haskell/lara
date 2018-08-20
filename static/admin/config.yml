@@ -2,20 +2,66 @@ backend:
   name: git-gateway
   branch: master
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
-media_folder: "static/images"
-public_folder: "/images"
+media_folder: "static/media"
+public_folder: "/media"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "static/_posts/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    delete: true
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - label: 'Pages'
+    name: 'pages'
+    files:
+      - label: 'Global Settings'
+        name: 'settings'
+        file: 'static/_pages/settings.json'
+        extension: json
+        preview: false
+        fields:
+          - label: Navbar
+            name: navbar
+            widget: object
+            fields:
+              - {label: Brand Label, name: brand, default: Lara, widget: string}
+              - label: Labels
+                name: labels
+                widget: object
+                fields:
+              - {label: Menu Label, name: menu, default: Menu, widget: string}
+              - {label: Close Label, name: close, default: Close, widget: string}
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                - {label: Label, name: label, widget: string}
+                - {label: Url, name: url, widget: string}
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - {label: Copyright, name: copyright, default: 'Copyright - Lara Studios 2018', widget: string}
+      - label: 'Homepage'
+        name: 'homepage'
+        file: 'static/_pages/homepage.json'
+        extension: json
+        preview: false
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Title, name: title, default: Lara, widget: string}
+              - {label: Description, name: description, default: 'anything can happen.', widget: string}
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: string}
+              - label: Tiles
+                name: tiles
+                widget: list
+                fields:
+                - {label: Feathers Icon, name: icon, widget: string}
+                - {label: Title, name: title, widget: string}
+                - {label: Description, name: description, widget: string}
 
