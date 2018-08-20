@@ -26,8 +26,8 @@ collections:
                 name: labels
                 widget: object
                 fields:
-              - {label: Menu Label, name: menu, default: Menu, widget: string}
-              - {label: Close Label, name: close, default: Close, widget: string}
+                - {label: Menu Label, name: menu, default: Menu, widget: string}
+                - {label: Close Label, name: close, default: Close, widget: string}
               - label: Links
                 name: links
                 widget: list
@@ -61,7 +61,7 @@ collections:
                 name: tiles
                 widget: list
                 fields:
-                - {label: Feathers Icon, name: icon, widget: string}
                 - {label: Title, name: title, widget: string}
+                - {label: Feathers Icon, name: icon, widget: string}
                 - {label: Description, name: description, widget: string}
 
